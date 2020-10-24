@@ -1,7 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route,browserHistory, Router } from 'react-router';
 import './App.css';
-import Emailverifiaction from './Emailverifiaction';
 import logo from './logo-social.png'
 import PersonalDetails from './PersonalDetails';
 
@@ -24,12 +22,9 @@ class App extends React.Component {
           </div>
 
         }
-   <Router history = {browserHistory}>
-         <Route path = "PersonalDetails" component = {PersonalDetails} />
-         <Route path = "Companydetails" component = {Emailverifiaction} />
-   </Router>
+
       </div>
-      
+
 
     );
 

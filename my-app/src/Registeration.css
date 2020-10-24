@@ -1,0 +1,23 @@
+.login > button{
+    padding: 20px;
+    background-color: green;
+    border-radius: 99px;
+    font-weight: 600;
+    font-size: 20px ;
+    color: white;
+    text-decoration:none;
+    width: 200px;
+  }
+  
+  .login > img{
+    margin-top:30px ;
+    height: 30%;
+    margin-bottom: 20%;
+  }
+  
+  .login{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: black; 
+  }

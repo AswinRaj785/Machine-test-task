@@ -1,3 +1,5 @@
+import { colors } from '@material-ui/core'
+import { red } from '@material-ui/core/colors'
 import React from 'react'
 import { Redirect } from 'react-router-dom'
 import Companydetails from './Companydetails'
@@ -27,27 +29,38 @@ class PersonalDetails extends React.Component {
             console.log("name validate successfull");
         } else {
             alert("please correct name");
+            return false;
         }
         if (this.state.Gender == "") {
             alert("please select the gender");
+            return false;
         }
         if (this.state.Country.match(letters)) {
             console.log("successfully validate the Country")
         } else {
             alert("please enter the country name");
+            return false;
 
         }
         if (this.state.State.match(letters)) {
             console.log("successfully validate the State")
         } else {
             alert("please enter the State name");
+            return false;
 
         }
         // if (this.state.Phone.match(phoneno)) {
         //     console.log("Phone no validation successfull")
         // } else {
         //     alert("please enter proper mobile")
+        //     return false;
         // }
+
+        localStorage.setItem("Fullname",this.state.Fullname)
+        localStorage.setItem("Gender",this.state.Gender)
+        localStorage.setItem("Country",this.state.Country)
+        localStorage.setItem("State",this.state.State)
+        localStorage.setItem("Phone",this.state.Phone)
 
         this.setState({ CompanyDetails: true })
     }
@@ -86,6 +99,7 @@ class PersonalDetails extends React.Component {
                                                 <button type="button" className="radio-btn" onClick={() => this.setState({ Gender: "FEMALE" })}>FEMALE</button>
                                                 <button type="button" className="radio-btn" onClick={() => this.setState({ Gender: "OTHER" })}>OTHERS</button>
                                             </div>
+                                            <small>select the gender by clicking on the button</small>
                                         </div><br></br><br></br><br></br>
                                         <div className="form-group">
                                             <label >Country:</label>

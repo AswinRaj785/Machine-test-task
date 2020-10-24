@@ -2,7 +2,8 @@ import React from 'react'
 
 function Emailverifiaction() {
     return (
-        <div>
+        <div className="Emailauthentication">
+            <h1>otp</h1>
             
         </div>
     )
